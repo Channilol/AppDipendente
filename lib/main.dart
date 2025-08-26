@@ -1,10 +1,12 @@
 import 'package:app_dipendente_merendels/views/dashboard.dart';
+import 'package:app_dipendente_merendels/views/login_screen.dart';
 import 'package:app_dipendente_merendels/views/requests.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 void main() {
-  runApp(const AppDipendente());
+  runApp(ProviderScope(child: const AppDipendente()));
 }
 
 final GoRouter _router = GoRouter(
@@ -16,7 +18,7 @@ final GoRouter _router = GoRouter(
         GoRoute(path: '/requets', builder: (context, state) => Requests()),
       ],
     ),
-    GoRoute(path: '/login', builder: (context, state) => Dashboard()),
+    GoRoute(path: '/login', builder: (context, state) => LoginScreen()),
   ],
 );
 

@@ -1,4 +1,4 @@
-class Requests {
+class Request {
   final int id;
   final int userId;
   final DateTime startDate;
@@ -7,7 +7,7 @@ class Requests {
   final String? note;
   final DateTime createdAt;
 
-  Requests({
+  Request({
     required this.id,
     required this.userId,
     required this.startDate,
